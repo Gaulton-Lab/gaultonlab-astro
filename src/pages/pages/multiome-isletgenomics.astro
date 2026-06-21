@@ -5,12 +5,14 @@ import Footer from "@/components/Footer.astro";
 import TerminalBadge from "@/components/TerminalBadge.astro";
 import { SITE } from "@/config";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const tools = [
   { label: "Single Cell Browser", icon: "dna", url: "http://tools.cmdga.org:3838/multiome-browser" },
   { label: "Differential Expression Browser", icon: "chart", url: "http://tools.cmdga.org:3838/multiome-expression-browser" },
   { label: "Differential Accessible cRE Browser", icon: "map", url: "http://tools.cmdga.org:3838/multiome-cRE" },
   { label: "Motif Browser", icon: "shapes", url: "http://tools.cmdga.org:3838/multiome-motifs" },
-  { label: "User Manual", icon: "book", url: `${import.meta.env.BASE_URL}pages/tools-guide/` },
+  { label: "User Manual", icon: "book", url: `${base}/pages/tools-guide/` },
   { label: "Links Browser", icon: "link", url: "https://epigenomegateway.wustl.edu/browser/" },
   { label: "Access ATAC and cell type link files", icon: "download", url: "https://www.dropbox.com/scl/fo/9ncblst9u6ixjvi189jnw/AKsUBHKV3JbftILoDVtOJRY?rlkey=ig7goqbz9zc8f0bo9iy3179lt&st=mjzl9495&dl=0" },
   { label: "Analysis Pipelines GitHub", icon: "code", url: "https://github.com/Gaulton-Lab/non-diabetic-islet-multiomics" },
@@ -23,7 +25,7 @@ const tools = [
   <Header />
   <main id="main-content" class="app-layout pb-16">
     <TerminalBadge path="resources/multiome-isletgenomics" />
-    <a href={`${import.meta.env.BASE_URL}resources/`} class="mt-1 mb-6 flex items-center gap-1 text-sm text-foreground/50 transition-colors hover:text-accent">
+    <a href={`${base}/resources/`} class="mt-1 mb-6 flex items-center gap-1 text-sm text-foreground/50 transition-colors hover:text-accent">
       <svg class="size-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
       Back to Resources
     </a>

@@ -10,6 +10,8 @@ import logoCmdga from "@/assets/images/resources/cmdga-logo.png";
 import logoPankbase from "@/assets/images/resources/pankbase-logo.png";
 import logoPankbaseLight from "@/assets/images/resources/pankbase-logo-light-theme.png";
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 const resources = [
   {
     name: "Common Metabolic Disease Genome Atlas (CMDGA)",
@@ -30,21 +32,21 @@ const resources = [
     name: "Islet Genomics",
     description:
       "Interactive tools and data relevant to our pancreatic islet studies.",
-    url: `${import.meta.env.BASE_URL}pages/Islet_expression_HPAP/`,
+    url: `${base}/pages/Islet_expression_HPAP/`,
     logo: null,
   },
   {
     name: "T1D Pancreas Genomics",
     description:
       "Single-cell multiome and spatial profiling reveals pancreas cell type-specific gene regulatory programs driving type 1 diabetes progression.",
-    url: `${import.meta.env.BASE_URL}pages/T1D-pancreas-genomics/`,
+    url: `${base}/pages/T1D-pancreas-genomics/`,
     logo: null,
   },
   {
     name: "Multiome Islet Genomics",
     description:
       "Datasets, tools, and information for pancreatic islet gene regulation research.",
-    url: `${import.meta.env.BASE_URL}pages/multiome-isletgenomics/`,
+    url: `${base}/pages/multiome-isletgenomics/`,
     logo: null,
   },
 ];
