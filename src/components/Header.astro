@@ -4,8 +4,7 @@ import IconSearch from "@/assets/icons/IconSearch.svg";
 import IconArchive from "@/assets/icons/IconArchive.svg";
 import IconGallery from "@/assets/icons/IconGallery.svg";
 import IconSunHigh from "@/assets/icons/IconSunHigh.svg";
-import LogoDark from "@/assets/logo/gl-logo-dark.svg";
-import LogoLight from "@/assets/logo/gl-logo-light.svg";
+import Logo from "./Logo.astro";
 import LinkButton from "./LinkButton.astro";
 import MobileMenu from "./MobileMenu.astro";
 import IntroAudioCompact from "./IntroAudioCompact.astro";
@@ -50,10 +49,9 @@ const isActive = (path: string) => {
         <!-- Logo -->
         <a
           href={`${base}/`}
-          class="group relative z-20 flex items-center gap-2 text-xl font-bold tracking-tight sm:text-2xl shrink-0"
+          class="logo-hover-target relative z-20 flex items-center gap-2 text-xl font-bold tracking-tight sm:text-2xl shrink-0"
         >
-          <LogoDark class="hidden w-40 dark:block" />
-          <LogoLight class="block w-40 dark:hidden" />
+          <Logo class="w-40" />
         </a>
 
         <!-- Center Audio Player -->
