@@ -9,6 +9,7 @@ import { SITE } from "@/config";
 import logoCmdga from "@/assets/images/resources/cmdga-logo.png";
 import logoPankbase from "@/assets/images/resources/pankbase-logo.png";
 import logoPankbaseLight from "@/assets/images/resources/pankbase-logo-light-theme.png";
+import logoT1grs from "@/assets/images/resources/t1grs-logo.png";
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
@@ -47,6 +48,27 @@ const resources = [
     description:
       "Datasets, tools, and information for pancreatic islet gene regulation research.",
     url: `${base}/pages/multiome-isletgenomics/`,
+    logo: null,
+  },
+  {
+    name: "CFRD Browser",
+    description:
+      "Single cell and spatial characterization of the human pancreas revealing drivers of beta cell dysfunction in cystic fibrosis-related diabetes. (Mummey et al., bioRxiv)",
+    url: "https://tools.cmdga.org/cfrd_browser",
+    logo: null,
+  },
+  {
+    name: "T1GRS",
+    description:
+      "Docker container for type 1 diabetes genetic risk score analysis.",
+    url: "https://hub.docker.com/r/kgaultonlab/t1d-grs-analysis-r3-catboost",
+    logo: logoT1grs,
+  },
+  {
+    name: "FNIH Heart scRNA",
+    description:
+      "Single cell multiomics and 3D genome architecture reveal novel pathways of human heart failure. (Xie, Tucciarone, Farah, Chang, et al.)",
+    url: "https://hugeamp.org/r/scb?datasetId=FNIH_Heart_scRNA_v3.2",
     logo: null,
   },
 ];
